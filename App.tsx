@@ -58,6 +58,7 @@ const App: React.FC = () => {
     setIsFading(true);
     setTimeout(() => {
       setHistory(prev => [...prev, pageId]);
+      window.scrollTo(0, 0);
       setIsFading(false);
     }, 500); // Corresponds to fade-out duration
   };
@@ -67,6 +68,7 @@ const App: React.FC = () => {
     setIsFading(true);
     setTimeout(() => {
       setHistory(prev => prev.slice(0, -1));
+      window.scrollTo(0, 0);
       setIsFading(false);
     }, 500);
   };
@@ -75,6 +77,7 @@ const App: React.FC = () => {
     setIsFading(true);
     setTimeout(() => {
       setHistory([0]);
+      window.scrollTo(0, 0);
       setIsFading(false);
     }, 500);
   };
@@ -116,3 +119,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+
